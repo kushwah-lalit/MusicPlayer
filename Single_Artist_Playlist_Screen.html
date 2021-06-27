@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- icon -->
+	<link rel ="icon" href="Images&CSS/images/music-app-icon_02.png" type = "image/x-icon" sizes="32x32" >
+	<!-- animate.css -->
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- Artist style css -->
+	<link rel="stylesheet" type="text/css" href="Images&CSS/CSS/Single_Artist_Playlist_styles.css">
+ 
+</head>
+<body class=" animate__animated animate__fadeIn">
+	<!-- navigation -->
+	<nav>
+		<div id="LOGO">
+		    <a href="#"><i class="fab fa-napster animate__animated animate__flip"></i></a>
+		</div>
+		<div id="name">
+			<span class="TextinNav">Ninja</span><br><span class="TextinNav" style="font-weight:700; color:#ee1c24">Studio</span>
+		</div>
+		<div id="navlist">
+			<a href="#" class="TextinNav">Favourites</a>
+		</div>
+		<div id="right">
+		<div id="search">
+		<form id="searchbar">
+		<button type="submit" id="mag"><i class="fas fa-search"></i></button>
+        <input class="form-control me-2" type="search" placeholder="Search for Songs!" aria-label="Search">
+        <button type="submit" id="mic"><i class="fas fa-microphone-alt"></i></button>
+	    </form>
+	    </div>
+	    <div id="notification">
+	        <i class="fas fa-bell"></i>
+	    </div>
+	    <div id="profile">
+	    	<a href="#"><img src="Images&CSS/images/2021-04-02 14.31.05.jpg"></img></a>
+	    </div>
+	    </div>
+	</nav>
+	<!--Body  -->
+	<div id="body">
+		<!-- two section left and right -->
+		<!-- left -->
+		<div id="Artistsection">
+			<!-- card -->
+			<div id="ArtistCard">
+				<!-- image -->
+				<div id="CardImg">
+					<img src="Images&CSS/images/crop_480x480_7286.jpeg">
+				</div>
+				<!-- description -->
+				<div id="CardText">
+					<!-- name and follow -->
+				<div class="description" style="width:90%;margin-bottom:0.3rem; ">	
+				<div id="SongName">
+					<span class="TextinBlock name" style="font-size:1.5rem;border-bottom:1px #ee1c24 solid; ">Taylor Swift</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:550 ">American Singer</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">778K Followers</span>
+				</div>
+			    </div>
+			    <!-- about -->
+			    <div class="description" style="width:90%;margin-bottom:0.3rem;" id="ArtistDescription">	
+				<div id="SongName">
+					<span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Pop icon Taylor Swift has broken multiple sales records and inspired millions of fans. As an aspiring country singer her self-titled debut album in 2006 peaked at number five on Billboard 200. Swift's second album, Fearless, was released in 2008. Buoyed by the success of pop crossover singles "Love Story" and "You Belong with Me", Fearless won four Grammy Awards, with Swift becoming the youngest Album of the Year winner. A true musical icon Taylor Swift has been the recipient of 10 Grammy Awards and holds five Guinness World Records.</span>
+				</div>
+			    </div>
+			    <!-- button play -->
+			    <div class="description" style="width:90%;margin-bottom:0.3rem;">	
+				<div id="SongName">
+					<span class="TextinBlock name" style="font-size:1.5rem;border-bottom:1px #ee1c24 solid; "><button type="submit" id="PlayAll">Play All</button></span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:450">1330 Tracks|187 Albums</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:550 "><i class="fas fa-plus"></i> Follow</span></button>
+				</div>
+			    </div>
+				</div>
+			</div>
+			<!-- list -->
+			<div id="ArtistSongs">
+				<!-- Each Song Box Repeated Below -->
+			    <div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_gkdigital_ING501802620.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Phulkari</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Simar Kaur</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602567045564-USUM71710087.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Rockstar</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Post Malone</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_timewarner_075679838872_A10302B0005015398Z.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Dance Monkey</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Tones & I</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602577004759-USUG11802029.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Taki Taki</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">DJ Snake</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_hungama_56720455.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Lean On</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Major Lazer</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602435648675-USUG12004699.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Willow</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Evermore</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602508009624-USUM71911283.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Señorita</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Shawn Mendes</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602547826527-USUM71601095.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Panda</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Desiigner</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/crop_175x175_3089153.jpeg">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Genda Phool</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Payal Dev</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/size_m_1567659563.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Gungroo</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Kumaar</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/size_m_1579686718.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Shayad</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Pritam</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:75px;">
+					   <img src="Images&CSS/images/size_m_1577334328.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">		
+				<div id="SongName">
+					<span class="TextinBlock name">Garmi</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Neha Kakkar</span>
+				</div>
+				<div style="text-align:right;margin-top:1.1rem; ">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-plus"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-v"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+				</div>
+			    </div>
+				</div>
+			</div>
+		</div>
+		<!-- right part -->
+		<div id="RightAside">
+			<!-- top -->
+			<div id="similarArtist">
+                <div class="header">	
+				<div class="headstyle">
+				Similar Artists
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<span class="TextinBlock" style="font-size:0.8rem; font-weight:400;">View All</span><button class="mybutton"><span class="TextinBlock"><i class="fas fa-chevron-circle-down"></i></span></button>
+					<div class="dropdown-content">
+					<a href="Index_HS_2.html"><i class="far fa-list-alt"></i> Playlists</a>
+					<a href="index.html"><i class="fas fa-list-ol"></i> Queue</a>
+					<a href="#"><i class="far fa-star"></i> Favourite Songs</a>
+				    </div>
+					</div>
+				</div>
+			    </div>
+			    <!-- Each Song Box Repeated Below "using sonbox here as artist container"-->
+			    <div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5ad472cc295162686d7c37f0.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Sanam</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">460K Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5a8eaf232951624319d6c380.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Arijit Singh</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">4.4M Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5af194cd29516217444f0346.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Alan Walker</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">1M Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5a8e915a2951624319d6bd8d.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Charlie Puth</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">951K Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5ad44afe295162686d7c3705.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Monali Thakur</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">376K Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox">
+					<div class="imgcontainer changesforcontainer" style="border-radius:50%;">
+					   <img src="Images&CSS/images/5a8e7ad42951624319d6bb8b.webp" style="border-radius:50%;border:1px white solid; ">
+                       <div class="PlayButton" style="border-radius:50%;">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description">	
+				<div id="SongName">
+					<span class="TextinBlock name">Maroon 5</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">1.3M Followers</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-share-alt"></i></span></button>
+				</div>
+			    </div>
+				</div>
+			</div>
+			<!-- bottom -->
+			<div id="RecentlyPlayed">
+
+				<div class="header">	
+				<div class="headstyle">
+				Recently Played
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<span class="TextinBlock" style="font-size:0.8rem; font-weight:400;">View All</span><button class="mybutton"><span class="TextinBlock"><i class="fas fa-chevron-circle-down"></i></span></button>
+					<div class="dropdown-content">
+					<a href="Index_HS_2.html"><i class="far fa-list-alt"></i> Playlists</a>
+					<a href="index.html"><i class="fas fa-list-ol"></i> Queue</a>
+					<a href="#"><i class="far fa-star"></i> Favourite Songs</a>
+				    </div>
+					</div>
+				</div>
+			    </div>
+			    <!-- Each Song Box Repeated Below -->
+			     <div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_gkdigital_ING501802620.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Phulkari</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Simar Kaur</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602567045564-USUM71710087.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Rockstar</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Post Malone</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_timewarner_075679838872_A10302B0005015398Z.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Dance Monkey</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Tones & I</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602577004759-USUG11802029.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Taki Taki</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">DJ Snake</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_hungama_56720455.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Lean On</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Major Lazer</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602435648675-USUG12004699.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Willow</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Evermore</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602508009624-USUM71911283.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Señorita</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Shawn Mendes</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/srch_universalmusic_00602547826527-USUM71601095.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Panda</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Desiigner</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/crop_175x175_3089153.jpeg">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Genda Phool</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Payal Dev</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/size_m_1567659563.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Gungroo</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Kumaar</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/size_m_1579686718.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Shayad</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Pritam</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+				<div class="songbox" style="justify-content:flex-start; ">
+					<div class="imgcontainer changesforcontainer" style="width:65px;">
+					   <img src="Images&CSS/images/size_m_1577334328.webp">
+                       <div class="PlayButton">
+                        <button type=""><i class="fas fa-play"></i></button>
+                       </div>
+					</div>
+				<div class="description" style="width:90%">	
+				<div id="SongName">
+					<span class="TextinBlock name">Garmi</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Neha Kakkar</span>
+				</div>
+				<div style="text-align:right">
+					<div class="dropdown" style="float:right;">
+					<button class="mybutton"><span class="TextinBlock"><i class="fas fa-ellipsis-h"></i></span></button>
+					<div class="dropdown-content">
+					<a href="#"><i class="fas fa-play"></i> Play Now</a>
+					<a href="#"><i class="fas fa-plus"></i> Add To Playlist</a>
+					<a href="#"><i class="far fa-list-alt"></i> Add To Favourites</a>
+					<a href="#"><i class="fas fa-info-circle"></i> Get Info</a>
+					</div>
+					</div>
+					<br>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+				</div>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- music layer button -->
+	<div id="buttonmusicplayer">
+		<!-- left -->
+		<div id="leftfilepart">
+				<div class="imgbeside">
+				   <img src="Images&CSS/images/srch_universalmusic_00602435648675-USUG12004699.webp">
+				</div>
+				<div class="nameAndbutton">	
+				<div>
+					<span class="TextinBlock" style="font-size:0.9rem; font-weight:550">Willow</span><br><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 ">Evermore</span>
+				</div>
+				&nbsp &nbsp
+				<div style="text-align:right">
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-heart"></i></span></button>
+					<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-ban"></i></span></button>
+				</div>
+			    </div>
+		</div>
+		<!-- mid -->
+		<div id="Middleplayer">
+			<div id="control">
+			    <button  id="like" type="radio" class="mybutton"><span class="controlBtn"><i class="fas fa-random"></i></i></span></button>
+				<button  id="like" type="radio" class="mybutton"><span class="controlBtn"><i class="fas fa-step-backward"></i></span></button>
+				<button  id="like" type="radio" class="mybutton"><span class="controlBtn" style="font-size:2rem !important;color:#afb8ba; "><i class="far fa-pause-circle"></i></span></button>
+				<button  id="like" type="radio" class="mybutton"><span class="controlBtn"><i class="fas fa-step-forward"></i></span></button>
+				<button  id="like" type="radio" class="mybutton"><span class="controlBtn"><i class="fas fa-redo-alt"></i></span></button>
+			</div>
+			<div id="duration">
+			  <span class="TextinBlock" style="font-size:0.7rem; font-weight:550 ">1:12&nbsp</span>
+		      <div class="slider" style="width:75%">	
+			  <div class="bar"></div>
+			  <div class="filler"></div>
+			  <div class="mover"></div>
+			  </div>
+			  <span class="TextinBlock" style="font-size:0.7rem; font-weight:550 ">&nbsp3:35</span>
+			</div>
+		</div>
+		<!-- right -->
+		<div id="rightvolume">
+			<div class="nameAndbutton" style="justify-content:flex-end !important;width:auto !important;">	
+				<div style="text-align:center;">
+					<button id="like" class="mybutton"><span class="TextinBlock" id="equilizer" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-sliders-h"></i></span></button>
+				</div>	
+			</div>
+			<div class="slidecontainer">
+			<button  id="like" type="radio" class="mybutton"><span class="TextinBlock" style="font-size:0.8rem; font-weight:400;color:#ee1c24;  "><i class="fas fa-volume-up"></i></span></button>
+			  <div class="slider">	
+			  <div class="bar"></div>
+			  <div class="filler"></div>
+			  <div class="mover"></div>
+			  </div>
+			</div>
+			<div class="nameAndbutton" style="justify-content:flex-end !important;width:auto !important;">	
+				<div style="text-align:center;">
+					<button id="like" class="mybutton"><span class="TextinBlock" id="equilizer" style="font-size:0.8rem; font-weight:400 "><i class="fas fa-expand-arrows-alt"></i></span></button>
+				</div>	
+			</div>
+      </div>
+  </div>
+</body>
+</html>
